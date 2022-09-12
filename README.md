@@ -10,7 +10,9 @@
  git clone https://github.com/Kashu7100/pytorch-armv7l
  ```
  ## 2) Установка зависимостей:
- 
+
+Завариваем чай и прописываем в консоль:
+
 
 ```
 cd //home/pi/yolov5-main
