@@ -30,6 +30,7 @@ sudo apt-get install libgtkmm-3.0-1 -y
 sudo apt-get install libnotify4 -y
 sudo apt-get install libpq-dev -y
 sudo apt install postgresql -y
+pip3 install psycopg2
 #cd pytorch-armv7l
 #pip3 install torch-1.7.0a0-cp37-cp37m-linux_armv7l.whl
 #pip3 install torchvision-0.8.0a0+45f960c-cp37-cp37m-linux_armv7l.whl
