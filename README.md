@@ -68,9 +68,12 @@ python3 yolov5_client.py
 
 <img width="445" alt="Screenshot 2022-09-12 at 13 46 33" src="https://user-images.githubusercontent.com/43553016/189635340-e81c22be-7ec4-4672-94f5-0f1b616d2f16.png">
 
+
 `pixelCoeff` -  параметр, отображаюший количетсво мм в одном пикселе. Для разных комплексов и групп он разный, вычисляется однократно эмпирически при отладке.
 
+
 `clipLimit` - параметр, необходимый для предобработки изображения, содержащего класс "Латте". Для разных комплексов и групп он разный, вычисляется эмпирически при отладке в зависимости от условий освещения.
+
 
 Параметры `yCropMin, yCropMax, xCropMin, xCropMax` - параметры, определяющие границы изображения на входе в детектор.
 
@@ -87,6 +90,7 @@ python3 camera-ping.py
 <img width="462" alt="Screenshot 2022-09-12 at 14 21 19" src="https://user-images.githubusercontent.com/43553016/189641354-132dcde5-5990-4ee0-986a-361faf307b78.png">
 
 Сохраняем изображение в клиенте Reolink -> Resize https://www.iloveimg.com/resize-image
+
 <img width="1280" alt="Screenshot 2022-09-12 at 14 53 28" src="https://user-images.githubusercontent.com/43553016/189648110-b4e7a0d5-4025-4ae6-9318-daef11846f64.png">
 
 Resize -> Crop https://www.iloveimg.com/crop-image
@@ -95,13 +99,19 @@ Resize -> Crop https://www.iloveimg.com/crop-image
 
 Устанавливаем коэффициенты
 <img width="1280" alt="Screenshot 2022-09-12 at 15 03 20" src="https://user-images.githubusercontent.com/43553016/189649106-c214e07b-32f3-4a75-970a-33c5d4a1926e.png">
+
 `yCropMin` = 653
+
 `yCropMax` = 653 + 643 = 1296 
+
 `xCropMin` = 320
+
 `xCropMax` = 320 + 493 = 813
- Коэффициенты зависят от положения камеры -> меняем положение камеры = меняем коэффициенты
+
+Коэффициенты зависят от положения камеры -> меняем положение камеры = меняем коэффициенты
  
  Пути сохранения сырых изображений, предиктов, результатов соответственно:
+
 `rawImagesSavePath` 
 `predictionImagesSavePath`
 `saveJsonResultsPath`
@@ -113,9 +123,6 @@ Resize -> Crop https://www.iloveimg.com/crop-image
 nano yolov5.service
 ```
 <img width="335" alt="Screenshot 2022-09-12 at 13 31 12" src="https://user-images.githubusercontent.com/43553016/189632662-2bf4dac2-7a43-4869-b2bb-5b5ef46c34ad.png">
-
-
-
 
 Обращаем внимание на WorkingDerictory - путь, в котором лежат файлы inference.py & yolov5_client.py
 
@@ -138,19 +145,4 @@ sudo systemctl status yolov5.service
 ```
 sudo journalctl -u yolov5.service -b -e
 ```
-
-После приготовления напитка появляется подобный вывод в статусе сервиса. Это говорит об успешном запуске программы.
-
-![image](https://user-images.githubusercontent.com/43553016/163826169-26d7c0fb-0ea6-43f9-a59b-910adda0ad92.png)
-
-## 6) Оценка результатов работы.
-
-Результаты работы записываются в файл json_pred.json, в котором агрегирована информация о текущем заказе.
-```bash
-cat json_pred.json
-```
-
-![image](https://user-images.githubusercontent.com/43553016/163827088-b1f25468-8c9d-4a9f-944e-a25903a00423.png)
-
-Также результаты работы передаются в топик "Coffee.core.detection" NATS-сервера.
 
