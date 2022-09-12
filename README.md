@@ -89,7 +89,9 @@ python3 yolov5_client.py
 Установим эти параметры. 
 Выбираем изображение с камеры. При этом, разрешение загружаемого изображения должно равняться разрешению изображению, снятому с камеры посредством скрипта, поскольку Fluent & Clear изображения из клиента Reolink могут давать другие разрешения.  
 
-Для этого смотрим разрешение в настройках камеры или произведем пинг камеры внутри комплекса с помощью скрипта `camera-ping.py`
+Для этого смотрим разрешение в настройках камеры или произведем пинг камеры внутри комплекса
+с помощью скрипта `camera-ping.py`
+
 
 ```
 cd //home/pi/yolov5-main
@@ -98,15 +100,15 @@ python3 camera-ping.py
 
 <img width="462" alt="Screenshot 2022-09-12 at 14 21 19" src="https://user-images.githubusercontent.com/43553016/189641354-132dcde5-5990-4ee0-986a-361faf307b78.png">
 
-Сохраняем изображение в клиенте Reolink -> Resize https://www.iloveimg.com/resize-image
+Сохраняем изображение в клиенте Reolink :arrow_right: Resize :arrow_right: Crop
+
+Resize - https://www.iloveimg.com/resize-image
+
+Crop - https://www.iloveimg.com/crop-image
 
 <img width="1280" alt="Screenshot 2022-09-12 at 14 53 28" src="https://user-images.githubusercontent.com/43553016/189648110-b4e7a0d5-4025-4ae6-9318-daef11846f64.png">
 
-Resize -> Crop https://www.iloveimg.com/crop-image
-
-Пример для nozzleId0:
-
-Устанавливаем коэффициенты
+Пример для `nozzleId0`:
 <img width="1280" alt="Screenshot 2022-09-12 at 15 03 20" src="https://user-images.githubusercontent.com/43553016/189649106-c214e07b-32f3-4a75-970a-33c5d4a1926e.png">
 
 :white_check_mark:`yCropMin` = 653
@@ -117,9 +119,9 @@ Resize -> Crop https://www.iloveimg.com/crop-image
 
 :white_check_mark:`xCropMax` = 320 + 493 = 813
 
-Коэффициенты зависят от положения камеры -> меняем положение камеры = меняем коэффициенты
+:underage:Коэффициенты зависят от положения камеры :arrow_right: меняем положение камеры = меняем коэффициенты
  
- Пути сохранения сырых изображений, предиктов, результатов соответственно:
+Пути сохранения сырых изображений, предиктов, результатов соответственно:
 
 :white_check_mark:`rawImagesSavePath` 
 
