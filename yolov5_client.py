@@ -22,7 +22,7 @@ class NatsClient:
         self._nc = NATS()
         self._size = (640, 640)  # input tensor shape
         self._actionCompleted_topic = 'complexos.bus.actionCompleted'
-
+        self._latteMenuItemId = config['inference']['latteMenuItemId']
         # Uncomment if you want to use PostgreSQL support
 
         # self.dbname = config["yolov5_inference"]["dbname"]
@@ -53,7 +53,7 @@ class NatsClient:
                 nozzle_id = data['order']['productDump']['nozzleId']
                 menu_item_id = data['order']['menuItemId']
                 reply = run_yolov5(self.rstp_address, self.model, self.thresh, order_number, order_id, nozzle_id,
-                                   menu_item_id, self._size, self.crop_config)
+                                   menu_item_id, self._size, self._latteMenuItemId, self.crop_config)
 
                 # Uncomment if you want to use PostgreSQL support
                 # self.logger.write_stats(self.dbname, reply)

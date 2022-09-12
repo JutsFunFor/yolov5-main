@@ -12,7 +12,7 @@ from datetime import datetime
 import os
 
 
-def run_yolov5(cap_address, model_path, thresh, order_number, order_id, nozzle_id, menu_item_id, image_size,
+def run_yolov5(cap_address, model_path, thresh, order_number, order_id, nozzle_id, menu_item_id, image_size, latte_id,
                crop_config):
     dt = []
     t1 = time_sync()
@@ -31,7 +31,7 @@ def run_yolov5(cap_address, model_path, thresh, order_number, order_id, nozzle_i
 
             frame0 = frame_raw[yCropMin:yCropMax, xCropMin:xCropMax]
             pixel_coeff = crop_config["nozzleId0"]["pixelCoeff"]  # real distance in mm in one pixel
-            clipLimit = crop_config["nozzleId0"]["clipLimit"]  # clipLimit for clahe equalization
+            clipLimit = crop_config["nozzleId0"]["clipLimit"]  # clipLimit for CLAHE equalization
         else:
             yCropMin = crop_config["nozzleId1"]['yCropMin']
             yCropMax = crop_config["nozzleId1"]['yCropMax']
@@ -40,10 +40,10 @@ def run_yolov5(cap_address, model_path, thresh, order_number, order_id, nozzle_i
 
             frame0 = frame_raw[yCropMin:yCropMax, xCropMin:xCropMax]
             pixel_coeff = crop_config["nozzleId1"]["pixelCoeff"]  # real distance in mm in one pixel
-            clipLimit = crop_config["nozzleId1"]["clipLimit"]  # clipLimit for clahe equalization
+            clipLimit = crop_config["nozzleId1"]["clipLimit"]  # clipLimit for CLAHE equalization
 
         #  Check for latte preprocessing
-        if menu_item_id != '01EDXWT7S4KGXHRH12A6TP15AS':
+        if menu_item_id != latte_id:
             # Apply hist equalization
             clahe = cv.createCLAHE(clipLimit=clipLimit, tileGridSize=(3, 3))
             lab = cv.cvtColor(frame0, cv.COLOR_BGR2LAB)

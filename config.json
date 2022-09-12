@@ -26,6 +26,7 @@
         "rstpAddress": "rtsp://admin:pipipi@192.168.1.22",
         "threshold": 0.5,
         "iouThreshold": 0.45,
+        "latteMenuItemId": "01EDXWT7S4KGXHRH12A6TP15AS",
         "natsUrl": "nats://complexos.local:4222",
         "sendResultsTopic": "coffee.core.detection",
         "dbname": "complex1_18",
