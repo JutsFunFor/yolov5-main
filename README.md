@@ -56,14 +56,21 @@ python3 yolov5_client.py
 
 <img width="460" alt="Screenshot 2022-09-12 at 13 47 09" src="https://user-images.githubusercontent.com/43553016/189635352-997966d9-2fe4-4a8a-b3e2-35e3c8c7799c.png">
 
-`modelPath` - название модели, если модель в другом расположении, то можно указать путь
-`rstpAddress` -  адрес rtsp сервера. rtsp://login:password:IP:port
-`threshold` - порог предикта
-`iouThreshold` - порог iou метрики
-`latteMenuItemId` - параметр, необходимый для предобработки латте и применения CLAHE 
-`natsUrl` -  дефолтный адрес 
-`sendResultsTopic` - топик для отправления результатов детекции
-`dbname, usr, pwd, host` - опционально (PostgreSQL). Нужно раскоментить строки (28-38) & (59-60) в yolov5_client.py для записи в БД.
+:white_check_mark:`modelPath` - название модели, если модель в другом расположении, то можно указать путь
+
+:white_check_mark:`rstpAddress` -  адрес rtsp сервера. rtsp://login:password:IP:port
+
+:white_check_mark:`threshold` - порог предикта
+
+:white_check_mark:`iouThreshold` - порог iou метрики
+
+:white_check_mark:`latteMenuItemId` - параметр, необходимый для предобработки латте и применения CLAHE 
+
+:white_check_mark:`natsUrl` -  дефолтный адрес 
+
+:white_check_mark:`sendResultsTopic` - топик для отправления результатов детекции
+
+:white_check_mark:`dbname, usr, pwd, host` - опционально (PostgreSQL). Нужно раскоментить строки (28-38) & (59-60) в yolov5_client.py для записи в БД.
 
 
 Выставляем crop-параметры в файле конфигурации `config.json`
@@ -71,10 +78,10 @@ python3 yolov5_client.py
 <img width="445" alt="Screenshot 2022-09-12 at 13 46 33" src="https://user-images.githubusercontent.com/43553016/189635340-e81c22be-7ec4-4672-94f5-0f1b616d2f16.png">
 
 
-`pixelCoeff` -  параметр, отображаюший количетсво мм в одном пикселе. Для разных комплексов и групп он разный, вычисляется однократно эмпирически при отладке.
+:white_check_mark:`pixelCoeff` -  параметр, отображаюший количетсво мм в одном пикселе. Для разных комплексов и групп он разный, вычисляется однократно эмпирически при отладке.
 
 
-`clipLimit` - параметр, необходимый для предобработки изображения, содержащего класс "Латте". Для разных комплексов и групп он разный, вычисляется эмпирически при отладке в зависимости от условий освещения.
+:white_check_mark:`clipLimit` - параметр, необходимый для предобработки изображения (CLAHE), содержащего класс "Латте". Для разных комплексов и групп он разный, вычисляется эмпирически при отладке в зависимости от условий освещения.
 
 
 Параметры `yCropMin, yCropMax, xCropMin, xCropMax` - параметры, определяющие границы изображения на входе в детектор.
@@ -102,21 +109,23 @@ Resize -> Crop https://www.iloveimg.com/crop-image
 Устанавливаем коэффициенты
 <img width="1280" alt="Screenshot 2022-09-12 at 15 03 20" src="https://user-images.githubusercontent.com/43553016/189649106-c214e07b-32f3-4a75-970a-33c5d4a1926e.png">
 
-`yCropMin` = 653
+:white_check_mark:`yCropMin` = 653
 
-`yCropMax` = 653 + 643 = 1296 
+:white_check_mark:`yCropMax` = 653 + 643 = 1296 
 
-`xCropMin` = 320
+:white_check_mark:`xCropMin` = 320
 
-`xCropMax` = 320 + 493 = 813
+:white_check_mark:`xCropMax` = 320 + 493 = 813
 
 Коэффициенты зависят от положения камеры -> меняем положение камеры = меняем коэффициенты
  
  Пути сохранения сырых изображений, предиктов, результатов соответственно:
 
-`rawImagesSavePath` 
-`predictionImagesSavePath`
-`saveJsonResultsPath`
+:white_check_mark:`rawImagesSavePath` 
+
+:white_check_mark:`predictionImagesSavePath`
+
+:white_check_mark:`saveJsonResultsPath`
 
 
 Для правильной работы сервиса необходимо проверить путь, указанный для выполнения программ.
