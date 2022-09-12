@@ -50,7 +50,7 @@ cd //home/pi/yolov5-main
 python3 inference.py
 python3 yolov5_client.py
 ```
-В настройках роутера устанавливаем статический IP-адрес камеры
+:warning:В настройках роутера устанавливаем статический IP-адрес камеры
 
 Выставляем  inference-параметры в файле конфигурации `config.json`
 
@@ -139,7 +139,7 @@ nano yolov5.service
 
 Обращаем внимание на WorkingDerictory - путь, в котором лежат файлы inference.py & yolov5_client.py
 
-## 5) Установка и запуск сервиса 
+## 5) Установка и запуск сервиса :rocket:
 ```bash
 sudo mv yolov5.service /etc/systemd/system
 ```
