@@ -42,7 +42,7 @@ Shall the new role be a superuser? (y/n) y
 ## 4) Проверка работоспособности. 
 Выполнение этих программ не должно вызывать ошибку.
 ```
-cd //home/pi/yolov5
+cd //home/pi/yolov5-main
 ```
 ```python
 python3 inference.py
