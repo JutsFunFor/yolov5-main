@@ -6,7 +6,7 @@ After=gnatsd.service
 Type=simple
 Restart=always
 RestartSec=5
-WorkingDirectory=/home/pi/yolov5/
+WorkingDirectory=/home/pi/yolov5-main/
 User=pi
 ExecStart=python3 yolov5_service.py
 
