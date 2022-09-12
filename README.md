@@ -54,8 +54,9 @@ python3 yolov5_client.py
 ```bash
 nano yolov5.service
 ```
+<img width="335" alt="Screenshot 2022-09-12 at 13 31 12" src="https://user-images.githubusercontent.com/43553016/189632662-2bf4dac2-7a43-4869-b2bb-5b5ef46c34ad.png">
 
-![image](https://user-images.githubusercontent.com/43553016/165237122-f159b376-d3bd-4bc2-8afa-ff032fdda742.png)
+
 
 
 Обращаем внимание на WorkingDerictory - путь, в котором лежат файлы inference.py & yolov5_client.py
