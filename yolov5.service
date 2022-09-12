@@ -1,0 +1,14 @@
+[Unit]
+Description=My test detection service
+After=gnatsd.service
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5
+WorkingDirectory=/home/pi/yolov5/
+User=pi
+ExecStart=python3 yolov5_service.py
+
+[Install]
+WantedBy=multi-user.target
