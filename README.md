@@ -13,7 +13,7 @@
  
 
 ```
-cd //home/pi/yolov5
+cd //home/pi/yolov5-main
 chmod +x setup_libs.sh
 chmod +x yolov5-reload.sh
 sh setup_libs.sh
@@ -66,7 +66,7 @@ sudo mv yolov5.service /etc/systemd/system
 ```
 Можно запустить в командной строке 
 ```
-cd //home/pi/yolov5
+cd //home/pi/yolov5-main
 sh yolov5-reload.sh 
 ```
 или выполнить следующие команды:
