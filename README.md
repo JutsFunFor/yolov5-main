@@ -42,7 +42,7 @@ createuser pi -P --interactive
 Shall the new role be a superuser? (y/n) y
 
 ## 4) Проверка работоспособности 
-Выполнение этих программ не должно вызывать ошибку.
+Выполнение этих программ не должно вызывать ошибку :pray:
 ```
 cd //home/pi/yolov5-main
 ```
