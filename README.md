@@ -31,7 +31,7 @@ pip3 install torch-1.7.0a0-cp37-cp37m-linux_armv7l.whl
 pip3 install torchvision-0.8.0a0+45f960c-cp37-cp37m-linux_armv7l.whl
 cd ..
 ```
-## 3) Установка PostgreSQL
+## 3) Установка PostgreSQL (опционально)
 ```
 sudo su postgres
 createuser pi -P --interactive
