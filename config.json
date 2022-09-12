@@ -1,5 +1,5 @@
 {
-    "yolov5_test": {
+    "crop": {
         "nozzleId0": {
             "pixelCoeff": 0.2631578947368421,
             "clipLimit": 1.90,
@@ -18,16 +18,16 @@
         },
         "rawImagesSavePath": "raw_imgs/",
         "predictionImagesSavePath": "pred/",
-        "saveJsonResultsPath": "json_pred.json"
+        "saveJsonResultsPath": "results.json"
     },
-    "yolov5_inference":
+    "inference":
     {
         "modelPath": "last_yolov5n_2.pt",
         "rstpAddress": "rtsp://admin:pipipi@192.168.1.22",
         "threshold": 0.5,
         "iouThreshold": 0.45,
         "natsUrl": "nats://complexos.local:4222",
-        "sendResultsTopic": "Coffee.core.detection",
+        "sendResultsTopic": "coffee.core.detection",
         "dbname": "complex1_18",
         "usr": "pi",
         "pwd": "3vn4ssps",

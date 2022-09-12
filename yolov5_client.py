@@ -12,13 +12,13 @@ class NatsClient:
         with open("config.json", 'r') as file:
             config = json.load(file)
 
-        self.model = config["yolov5_inference"]["modelPath"]
-        self.thresh = config["yolov5_inference"]["threshold"]
-        self.iou_thresh = config["yolov5_inference"]["iouThreshold"]
-        self.rstp_address = config["yolov5_inference"]["rstpAddress"]
-        self._url = config["yolov5_inference"]["natsUrl"]
-        self._topic = config["yolov5_inference"]["sendResultsTopic"]
-        self.crop_config = config["yolov5_test"]
+        self.model = config["inference"]["modelPath"]
+        self.thresh = config["inference"]["threshold"]
+        self.iou_thresh = config["inference"]["iouThreshold"]
+        self.rstp_address = config["inference"]["rstpAddress"]
+        self._url = config["inference"]["natsUrl"]
+        self._topic = config["inference"]["sendResultsTopic"]
+        self.crop_config = config["crop"]
         self._nc = NATS()
         self._size = (640, 640)  # input tensor shape
         self._actionCompleted_topic = 'complexos.bus.actionCompleted'
