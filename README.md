@@ -1,7 +1,7 @@
 
-# Yolov5 Coffee Detector
+# Yolov5 Coffee Detector :robot:
  
- ## 1) Начало работы.
+ ## 1) Начало работы
  
  ```git
  git clone https://github.com/JutsFunFor/yolov5-main
@@ -9,7 +9,7 @@
  ```
  git clone https://github.com/Kashu7100/pytorch-armv7l
  ```
- ## 2) Установка зависимостей:
+ ## 2) Установка зависимостей
 
 Завариваем чай и прописываем в консоль:
 
@@ -41,7 +41,7 @@ createuser pi -P --interactive
 Вводим пароль: ```3vn4ssps```
 Shall the new role be a superuser? (y/n) y
 
-## 4) Проверка работоспособности. 
+## 4) Проверка работоспособности 
 Выполнение этих программ не должно вызывать ошибку.
 ```
 cd //home/pi/yolov5-main
@@ -128,7 +128,7 @@ nano yolov5.service
 
 Обращаем внимание на WorkingDerictory - путь, в котором лежат файлы inference.py & yolov5_client.py
 
-## 5) Установка и запуск сервиса.
+## 5) Установка и запуск сервиса 
 ```bash
 sudo mv yolov5.service /etc/systemd/system
 ```
