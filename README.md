@@ -161,5 +161,16 @@ sudo journalctl -u yolov5.service -b -e
 ## 6) API
 Формат ответа выглядит следующим образом:
 ```
-"{'Detection': {'Coffee': {'Xmax': '389.0', 'Ymax': '138.0', 'Ymin': '272.0', 'Score': '0.95'}, 'CupTop': {'Xmax': '459.0', 'Ymax': '26.0', 'Ymin': '290.0', 'Score': '0.97'}}, 'OrderId': '01G5757AKN9KVXABD1NX7AZSVG', 'OrderNumber': '463', 'NozzleId': '1', 'MenuItemId': '01G3GVZX2YW4WXEJNG2P1ZT3G1', 'DateTime': '2022-06-10 18:56:59', 'Capture_duration': '1.94', 'Inference_duration': '2.74', 'Save_img_duration': '0.08', 'Total_time': '4.76', 'RealDistance': '26.53'}"
+"{'Detection': {'Coffee': {'Xmax': '389.0', 'Ymax': '138.0', 'Ymin': '272.0', 'Score': '0.95'},
+'CupTop': {'Xmax': '459.0', 'Ymax': '26.0', 'Ymin': '290.0', 'Score': '0.97'}},
+'OrderId': '01G5757AKN9KVXABD1NX7AZSVG',
+'OrderNumber': '463',
+'NozzleId': '1',
+'MenuItemId': '01G3GVZX2YW4WXEJNG2P1ZT3G1',
+'DateTime': '2022-06-10 18:56:59',
+'Capture_duration': '1.94',
+'Inference_duration': '2.74',
+'Save_img_duration': '0.08',
+'Total_time': '4.76',
+'RealDistance': '26.53'}"
 ```
