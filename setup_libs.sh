@@ -36,4 +36,5 @@ pip3 install pyyaml
 pip3 install matplotlib
 pip3 install tqdm
 pip3 install seaborn
+pip3 install asyncio-nats-streaming
 
