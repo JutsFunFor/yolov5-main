@@ -19,7 +19,7 @@ cd //home/pi/yolov5-main
 chmod +x setup_libs.sh
 chmod +x yolov5-reload.sh
 sh setup_libs.sh
-cd ..
+cd //home/pi
 ```
 
 ```
@@ -28,6 +28,7 @@ rm pytorch-armv7l.zip
 ```
 
 ```
+export PATH="$HOME/.local/bin:$PATH"
 cd //home/pi/pytorch-armv7l
 pip3 install torch-1.7.0a0-cp37-cp37m-linux_armv7l.whl
 pip3 install torchvision-0.8.0a0+45f960c-cp37-cp37m-linux_armv7l.whl
