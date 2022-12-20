@@ -1,8 +1,7 @@
 sudo apt update -y
 sudo apt upgrade -y
 sudo apt-get install zip -y
-#unzip pytorch-armv7l.zip
-#rm pytorch-armv7l.zip
+
 pip3 install -r requirements.txt
 sudo apt-get install python3-pip -y
 pip3 install numpy==1.20
@@ -34,7 +33,7 @@ pip3 install psycopg2
 pip3 install opencv-python==4.5.5.62
 pip3 install pandas
 pip3 install pyyaml
-#cd pytorch-armv7l
-#pip3 install torch-1.7.0a0-cp37-cp37m-linux_armv7l.whl
-#pip3 install torchvision-0.8.0a0+45f960c-cp37-cp37m-linux_armv7l.whl
-#cd ..
+pip3 install matplotlib
+pip3 install tqdm
+pip3 install seaborn
+
