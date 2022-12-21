@@ -28,12 +28,5 @@ sudo apt-get install libgtkmm-3.0-1 -y
 sudo apt-get install libnotify4 -y
 sudo apt-get install libpq-dev -y
 sudo apt install postgresql -y
-pip3 install psycopg2
-pip3 install opencv-python==4.5.5.62
-pip3 install pandas
-pip3 install pyyaml
-pip3 install matplotlib
-pip3 install tqdm
-pip3 install seaborn
-pip3 install asyncio-nats-streaming
+
 
