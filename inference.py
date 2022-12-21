@@ -6,7 +6,7 @@ from PIL import Image
 from utils.augmentations import letterbox
 from utils.torch_utils import select_device, time_sync
 from models.common import DetectMultiBackend
-from utils.general import check_img_size, non_max_suppression, scale_coords, xyxy2xywh
+from utils.general import check_img_size, non_max_suppression, scale_coords
 from utils.plots import Annotator, colors
 from datetime import datetime
 import os
@@ -126,9 +126,10 @@ def run_yolov5(cap_address, model_path, thresh, order_number, order_id, nozzle_i
                 y_max_det = np.append(y_max_det, np.abs(np.float32(xyxy[1])))
                 c = int(cls)
                 res_line["Detection"][str(names[c])] = {
+                    "Xmin": f"{np.float32(xyxy[0])}",
+                    "Ymin": f"{np.float32(xyxy[1])}",
                     "Xmax": f"{np.float32(xyxy[2])}",
-                    "Ymax": f"{np.float32(xyxy[1])}",
-                    "Ymin": f"{np.float32(xyxy[3])}",
+                    "Ymax": f"{np.float32(xyxy[3])}",
                     "Score": f"{np.float32(conf):.2f}"
                 }  # label format
 
