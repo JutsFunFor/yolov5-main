@@ -22,7 +22,6 @@ def run_yolov5(cap_address, model_path, thresh, order_number, order_id, nozzle_i
     nozzle_id = str(nozzle_id)
 
     if ret:
-        frame_raw = Image.fromarray(frame_raw)
         if nozzle_id == '0':
             yCropMin = crop_config["nozzleId0"]['yCropMin']
             yCropMax = crop_config["nozzleId0"]['yCropMax']
