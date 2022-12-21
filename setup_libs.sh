@@ -2,11 +2,10 @@ sudo apt update -y
 sudo apt upgrade -y
 sudo apt-get install zip -y
 
-pip3 install -r requirements.txt
 sudo apt-get install python3-pip -y
 pip3 install numpy==1.20
 export PATH=/home/pi/.local/bin:$PATH
-pip3 install -r requirements.txt -y
+pip3 install -r requirements.txt
 sudo apt-get install libwebp-dev -y
 sudo apt-get install python3-dev python3-numpy -y
 sudo apt-get install libjpeg-dev libtiff-dev libgif-dev -y
