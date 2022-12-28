@@ -101,6 +101,15 @@ def run_yolov5(cap_address, model_path, thresh, order_number, order_id, nozzle_i
     # Format to datetime
     f = '%Y-%m-%d %H:%M:%S'
 
+    # format for date
+    date_format = "%d.%m.%Y"
+    # format for time
+    time_format = "%H:%M:%S"
+
+    current_date = datetime.now().date().strftime(date_format)
+    current_time = datetime.now().time().strftime(time_format)
+
+
     # score, real_distance = 0, 0
     y_max_det = np.array([])  # yMaxDet[0] refers to Coffee class, yMaxDet[1] - to CupTop class
     res_line = {"Detection": {"Coffee": {}, "CupTop": {}},
@@ -109,6 +118,8 @@ def run_yolov5(cap_address, model_path, thresh, order_number, order_id, nozzle_i
                 "NozzleId": nozzle_id,
                 "MenuItemId": f"{menu_item_id}",
                 "DateTime": f"{datetime.now().strftime(f)}"}
+
+
 
     for i, det in enumerate(pred):
 
@@ -136,8 +147,8 @@ def run_yolov5(cap_address, model_path, thresh, order_number, order_id, nozzle_i
                 annotator.box_label(xyxy, label, color=colors(c, True))
 
         im0 = annotator.result()
-        cv.imwrite(f'{save_pred_path}/{order_number}-{datetime.now()}.png', im0)
-    cv.imwrite(f'{save_raw_path}/{order_number}-{datetime.now()}.png', frame0)
+        cv.imwrite(f'{save_pred_path}/{current_date}/{current_time}-{order_number}.png', im0)
+    cv.imwrite(f'{save_raw_path}/{current_date}/{current_time}-{order_number}.png', frame0)
 
     t4 = time_sync()
     dt.append(t2 - t1)  # Capture and crop + change colorspace time
