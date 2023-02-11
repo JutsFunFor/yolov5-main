@@ -200,3 +200,4 @@ sudo docker commit CONTAINER_ID alekseyml/yolov5:latest
 ```
 sudo docker run -it -d -p 554:554 --privileged -v /home/pi/YOUR_PROJECT_FOLDER_FOR_IMGS:/app/imgs alekseyml/yolov5:latest python3 yolov5_service.py
 ```
+Изображения сохраняются как на распберри(в директории ```/home/pi/YOUR_PROJECT_FOLDER_FOR_IMGS```), так и внутри контейнера (```/app/imgs```).
