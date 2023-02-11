@@ -177,7 +177,7 @@ sudo journalctl -u yolov5.service -b -e
 'Total_time': '4.76',
 'RealDistance': '26.53'}"
 ```
-## Docker Support
+## 7)Docker Support
 Загрузка образа
 ```
 sudo docker pull alekseyml/yolov5
