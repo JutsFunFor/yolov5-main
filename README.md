@@ -177,3 +177,26 @@ sudo journalctl -u yolov5.service -b -e
 'Total_time': '4.76',
 'RealDistance': '26.53'}"
 ```
+## Docker Support
+Загрузка образа
+```
+sudo docker pull alekseyml/yolov5
+```
+Настройка конфигуационного файла аналогична действиям, описанным в шаге 4). Для изменения конфигурационного фала:
+```
+sudo docker run -it -p 554:554 --privileged alekseyml/yolov5 bash
+```
+Это запустит контейнер и позволит изменить настройки конфигурационного фалйа.
+После изменения файла нужно выйти из интерактивного режима прописав команду ```exit ```
+Для того чтобы применить изменения прописываем:
+``` 
+sudo docker ps -a
+```
+Копируем ID контейнера, из которого только что вышли и далее:
+```
+sudo docker commit alekseyml/yolov5:latest
+```
+После этого можно запускать контейнер в рабочем режиме:
+```
+sudo docker run -it -d -p 554:554 --privileged -v /home/pi/YOUR_PROJECT_FOLDER_FOR_IMGS:/app/imgs alekseyml/yolov5:latest python3 yolov5_service.py
+```
